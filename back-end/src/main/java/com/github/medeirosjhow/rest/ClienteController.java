@@ -1,5 +1,7 @@
 package com.github.medeirosjhow.rest;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,5 +69,10 @@ public class ClienteController {
 			return repository.save(cliente);
 		})
 		.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+	}
+	
+	@GetMapping
+	public List<Cliente> obterTodos(){
+		return repository.findAll();
 	}
 }
