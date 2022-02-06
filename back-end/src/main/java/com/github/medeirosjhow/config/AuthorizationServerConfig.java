@@ -20,7 +20,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
-	@Value("${security.jwt.signing-key}")
+	@Value("${security.jwt.spring-key}")
 	private String signinkey;
 	
 	
